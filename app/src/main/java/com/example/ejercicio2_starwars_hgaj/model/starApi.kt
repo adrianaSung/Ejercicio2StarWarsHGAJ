@@ -8,10 +8,10 @@ import retrofit2.http.Url
 interface starApi {
 
     @GET("api/people/")
-    fun personaje(): Call<star>
+    fun personaje(): Call<starPersona>
 
     @GET("api/people/{num}/")
-    fun personajeDetail(@Path("num") url: String?): Call<starDetail>
+    fun personajeDetail(@Path("num") num: String?): Call<starDetail>
 
 
 

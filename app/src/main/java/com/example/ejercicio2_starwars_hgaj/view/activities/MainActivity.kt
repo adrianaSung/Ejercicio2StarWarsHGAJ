@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.ejercicio2_starwars_hgaj.databinding.ActivityMainBinding
 import com.example.ejercicio2_starwars_hgaj.model.star
 import com.example.ejercicio2_starwars_hgaj.model.starApi
+import com.example.ejercicio2_starwars_hgaj.model.starPersona
 import com.example.ejercicio2_starwars_hgaj.util.Constants
 import com.example.ejercicio2_starwars_hgaj.view.adapters.Adapter
 import kotlinx.coroutines.CoroutineScope
@@ -15,6 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 //import javax.security.auth.callback.Callback
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
@@ -27,10 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             val call = Constants.getRetrofit().create(starApi::class.java).personaje()
-            call.enqueue(object: retrofit2.Callback<star> {
-                override fun onResponse(call: Call<star>, response: Response<star>) {
+            call.enqueue(object: retrofit2.Callback<starPersona> {
+                override fun onResponse(call: Call<starPersona>, response: Response<starPersona>) {
                     //Log.d(Constants.LOGTAG,"Respuesta del servidor: ${response.toString()}" )
                     //Log.d(Constants.LOGTAG,"Datos: ${response.body().toString()}" )
+
 
                     binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rvMenu.adapter = Adapter(this@MainActivity,response.body()!!)
@@ -38,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-                override fun onFailure(call: Call<star>, t: Throwable) {
+                override fun onFailure(call: Call<starPersona>, t: Throwable) {
                     binding.pbConexion.visibility = View.GONE
 
                 }
@@ -48,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun selectedStar(star: star) {
+    fun selectedStar(star: starPersona) {
 
 
     }
