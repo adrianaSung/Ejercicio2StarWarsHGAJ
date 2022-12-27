@@ -1,5 +1,6 @@
 package com.example.ejercicio2_starwars_hgaj.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -53,7 +54,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun selectedStar(star: starPersona) {
+    fun selectedStar(starwar: starPersona, position: Int) {
+        val parametros = Bundle()
+
+        parametros.apply {
+            putString("name", starwar.results[position].name )
+        }
+        val intent = Intent(this@MainActivity,Details::class.java)
+        intent.putExtras(parametros)
+        startActivity(intent)
+
 
 
     }

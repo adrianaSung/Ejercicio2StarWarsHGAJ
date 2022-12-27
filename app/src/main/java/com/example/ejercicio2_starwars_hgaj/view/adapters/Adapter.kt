@@ -34,7 +34,7 @@ class Adapter(private val contexto: Context, private val starwar: starPersona): 
 
         holder.itemView.setOnClickListener {
             if(contexto is MainActivity){
-                contexto.selectedStar(starwar)
+                contexto.selectedStar(starwar,position)
             }
         }
 
