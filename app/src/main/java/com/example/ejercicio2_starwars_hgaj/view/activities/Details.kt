@@ -10,8 +10,6 @@ import com.example.ejercicio2_starwars_hgaj.util.Constants
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.http.Path
-import javax.security.auth.callback.Callback
 import retrofit2.Call
 //import retrofit2.Callback
 import retrofit2.Response
@@ -27,11 +25,18 @@ class Details : AppCompatActivity() {
 
 
 
+        var caracterPer: Int = 0
+
         val bundle = intent.extras
 
         val name = bundle?.getString("name", "")
+        for ((clave, valor) in Constants.listaPersonajes){
+            if (clave.equals(name.toString())) {
+                caracterPer = valor
+            }
+        }
 
-        val call = Constants.getRetrofit().create(starApi::class.java).personajeDetail(num = String())
+        val call = Constants.getRetrofit().create(starApi::class.java).personajeDetail(caracterPer)
 
         CoroutineScope(Dispatchers.IO).launch {
 
