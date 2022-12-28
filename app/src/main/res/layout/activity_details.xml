@@ -28,14 +28,15 @@
 
 
                 <TextView
-                    android:id="@+id/tvTitle"
+                    android:id="@+id/tvPersonaje"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
                     android:gravity="center_horizontal"
                     android:paddingBottom="10dp"
                     android:textColor="@color/white"
                     android:textSize="25sp"
-                    tools:text="Title" />
+                    tools:text="Personaje" />
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/ivImage"
@@ -47,16 +48,26 @@
                     tools:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:id="@+id/tvLongDesc"
+                    android:id="@+id/tvPlaneta"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="103dp"
+                    android:fontFamily="@font/aldrich"
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    tools:text="Description" />
+                    tools:text="Planeta" />
+
+                <TextView
+                    android:id="@+id/tvPelicula"
+                    android:layout_width="match_parent"
+                    android:layout_height="109dp"
+                    android:fontFamily="@font/aldrich"
+                    android:text="Pelicula"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
             </LinearLayout>
         </ScrollView>
 

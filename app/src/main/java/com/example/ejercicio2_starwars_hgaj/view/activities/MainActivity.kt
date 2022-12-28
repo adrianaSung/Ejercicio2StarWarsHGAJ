@@ -56,9 +56,11 @@ class MainActivity : AppCompatActivity() {
 
     fun selectedStar(starwar: starPersona, position: Int) {
         val parametros = Bundle()
+        
+
 
         parametros.apply {
-            putString("name", starwar.results[position].name )
+            putString("name", starwar.results[position].name)
         }
         val intent = Intent(this@MainActivity,Details::class.java)
         intent.putExtras(parametros)

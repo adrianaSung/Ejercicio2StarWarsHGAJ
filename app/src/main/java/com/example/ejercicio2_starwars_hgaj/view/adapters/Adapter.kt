@@ -16,6 +16,7 @@ class Adapter(private val contexto: Context, private val starwar: starPersona): 
         val tvAltura = view.tvAltura
         val tvNacimiento = view.tvNacimiento
         val tvGenero = view.tvGenero
+        val tvNumero= view.tvNumero
 
     }
 
@@ -26,6 +27,11 @@ class Adapter(private val contexto: Context, private val starwar: starPersona): 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        for ((clave, valor) in Constants.listaPersonajes){
+            if (clave.equals(starwar.results[position].name)) {
+                holder.tvNumero.text = valor.toString()
+            }
+        }
 
         holder.tvNombre.text = starwar.results[position].name
         holder.tvAltura.text=starwar.results[position].height

@@ -12,5 +12,6 @@ class results(
     val height: String,
     val birth_year: String,
     val gender: String,
+    val url: String
 
 )

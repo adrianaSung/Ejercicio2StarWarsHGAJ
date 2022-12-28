@@ -3,7 +3,7 @@ package com.example.ejercicio2_starwars_hgaj.model
 import com.google.gson.annotations.SerializedName
 
 data class starDetail (
-    @SerializedName("people")
+    @SerializedName("url")
     var url: String?=null,
     @SerializedName("name")
     var name: String? = null,
@@ -15,4 +15,5 @@ data class starDetail (
     var gender:String? = null
 
 )
+
 
