@@ -41,65 +41,127 @@
                 <TextView
                     android:id="@+id/tvPlaneta"
                     android:layout_width="match_parent"
-                    android:layout_height="152dp"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/aldrich"
                     android:text="Planeta"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="189dp"
+                    app:srcCompat="@drawable/starwarsplanet" />
+
+                <TextView
+                    android:id="@+id/textNombredel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Nombre del planeta"
+                    android:textColor="@color/design_default_color_on_secondary" />
+
                 <TextView
                     android:id="@+id/tvNombrePlaneta"
-                    android:layout_width="match_parent"
-                    android:layout_height="58dp"
+                    android:layout_width="209dp"
+                    android:layout_height="39dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Nombre"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/textPeriodoR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Periodo de rotación"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tvPeriodoR"
                     android:layout_width="match_parent"
-                    android:layout_height="61dp"
+                    android:layout_height="38dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Periodo de rotación"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/textPeriodoO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Periodo orbital"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tvPeriodoO"
                     android:layout_width="match_parent"
-                    android:layout_height="49dp"
+                    android:layout_height="34dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Periodo orbital"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/textDiametrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Diametro"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tvDiametro"
                     android:layout_width="match_parent"
-                    android:layout_height="54dp"
+                    android:layout_height="36dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Diametro"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/textClima"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Clima"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tvClima"
                     android:layout_width="match_parent"
-                    android:layout_height="57dp"
+                    android:layout_height="36dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Clima"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
+                    android:id="@+id/textTerreno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Terreno"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tvTerreno"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="37dp"
                     android:fontFamily="@font/supermercado_one"
                     android:text="Terreno"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textPoblación"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/krona_one"
+                    android:text="Población"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/tvPoblacion"
@@ -109,6 +171,14 @@
                     android:text="Poblacion"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/btPelicula"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="Peliculas"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </ScrollView>
 
