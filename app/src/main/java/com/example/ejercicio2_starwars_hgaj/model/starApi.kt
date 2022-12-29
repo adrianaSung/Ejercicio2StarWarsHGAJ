@@ -16,7 +16,7 @@ interface starApi {
     fun planeta(): Call<starPlaneta>
 
     @GET("api/planets/{num2}/")
-    fun planetaDetail(@Path("num2") num2: Int): Call<starPlanetaDetail>
+    fun planetaDetail(@Path("num2") num: Int): Call<starPlanetaDetail>
 
 
 
