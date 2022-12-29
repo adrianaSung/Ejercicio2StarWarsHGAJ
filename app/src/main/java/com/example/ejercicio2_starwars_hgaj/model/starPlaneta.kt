@@ -8,7 +8,7 @@ data class starPlaneta(
 )
 
 class resultsplaneta(
-    @SerializedName("namePlanet")
+   // @SerializedName("namePlanet")
     val name: String,
     val rotation_period: String,
     val orbital_period: String,
