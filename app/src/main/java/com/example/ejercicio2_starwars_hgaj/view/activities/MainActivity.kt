@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             val call = Constants.getRetrofit().create(starApi::class.java).personaje()
+
             call.enqueue(object: retrofit2.Callback<starPersona> {
                 override fun onResponse(call: Call<starPersona>, response: Response<starPersona>) {
                     //Log.d(Constants.LOGTAG,"Respuesta del servidor: ${response.toString()}" )

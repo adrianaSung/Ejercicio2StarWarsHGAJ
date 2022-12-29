@@ -38,36 +38,77 @@
                     android:textSize="25sp"
                     tools:text="Personaje" />
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/ivImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    app:riv_corner_radius="10dp"
-                    tools:src="@mipmap/ic_launcher" />
-
                 <TextView
                     android:id="@+id/tvPlaneta"
                     android:layout_width="match_parent"
-                    android:layout_height="103dp"
+                    android:layout_height="152dp"
                     android:fontFamily="@font/aldrich"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="10dp"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    tools:text="Planeta" />
-
-                <TextView
-                    android:id="@+id/tvPelicula"
-                    android:layout_width="match_parent"
-                    android:layout_height="109dp"
-                    android:fontFamily="@font/aldrich"
-                    android:text="Pelicula"
+                    android:text="Planeta"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvNombrePlaneta"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Nombre"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvPeriodoR"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Periodo de rotación"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvPeriodoO"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Periodo orbital"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvDiametro"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Diametro"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvClima"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Clima"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvTerreno"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Terreno"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvPoblacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/supermercado_one"
+                    android:text="Poblacion"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
             </LinearLayout>
         </ScrollView>
 

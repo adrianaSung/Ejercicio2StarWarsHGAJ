@@ -13,10 +13,10 @@ interface starApi {
     fun personajeDetail(@Path("num") num: Int): Call<starDetail>
 
     @GET("api/planets/")
-    fun planeta(): Call<starPersona>
+    fun planeta(): Call<starPlaneta>
 
     @GET("api/planets/{num2}/")
-    fun planetaDetail(@Path("num2") num2: String?): Call<starDetail>
+    fun planetaDetail(@Path("num2") num2: Int): Call<starPlanetaDetail>
 
 
 
