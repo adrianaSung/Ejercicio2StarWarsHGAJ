@@ -33,7 +33,7 @@ class Details : AppCompatActivity() {
         val bundle = intent.extras
 
         val name = bundle?.getString("name", "")
-        //val namePlanet = bundle?.getString("namePlanet", "")
+       // val namePlanet = bundle?.getString("namePlanet", "")
         for ((clave, valor) in Constants.listaPlanetas){
             if (clave.equals(name.toString())) {
                 caracterPlan = valor
@@ -56,6 +56,7 @@ class Details : AppCompatActivity() {
                     binding.pbConexion.visibility = View.GONE
                     with(binding){
                         tvPersonaje.text = response.body()?.name
+
                     }
 
 
