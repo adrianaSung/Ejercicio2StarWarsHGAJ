@@ -7,6 +7,7 @@ import android.view.View
 import com.example.ejercicio2_starwars_hgaj.databinding.ActivityDetailsBinding
 import com.example.ejercicio2_starwars_hgaj.model.starApi
 import com.example.ejercicio2_starwars_hgaj.model.starDetail
+import com.example.ejercicio2_starwars_hgaj.model.starPersona
 import com.example.ejercicio2_starwars_hgaj.model.starPlanetaDetail
 import com.example.ejercicio2_starwars_hgaj.util.Constants
 import kotlinx.coroutines.CoroutineScope
@@ -94,8 +95,16 @@ class Details : AppCompatActivity() {
             })
         }
     }
-    fun click(view: View){
+    fun click(starwar: starPersona, position: Int){
+        val parametros = Bundle()
+
+
+
+        parametros.apply {
+            putString("name", starwar.results[position].name)
+        }
         val intent2 = Intent(this@Details,FilmActivity::class.java)
+        intent.putExtras(parametros)
         startActivity(intent2)
     }
 
