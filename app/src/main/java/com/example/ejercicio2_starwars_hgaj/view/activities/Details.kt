@@ -95,7 +95,7 @@ class Details : AppCompatActivity() {
         }
     }
     fun click(view: View){
-        val intent2 = Intent(this,PeliculasDetails::class.java)
+        val intent2 = Intent(this@Details,PeliculasDetails::class.java)
         startActivity(intent2)
     }
 
