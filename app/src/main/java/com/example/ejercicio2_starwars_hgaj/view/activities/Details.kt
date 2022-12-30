@@ -95,17 +95,11 @@ class Details : AppCompatActivity() {
             })
         }
     }
-    fun click(starwar: starPersona, position: Int){
-        val parametros2 = Bundle()
+    fun click(view: View){
 
+        val intent = Intent(this@Details,FilmActivity::class.java)
 
-
-        parametros2.apply {
-            putString("name", starwar.results[position].name)
-        }
-        val intent2 = Intent(this@Details,FilmActivity::class.java)
-        intent2.putExtras(parametros2)
-        startActivity(intent2)
+        startActivity(intent)
     }
 
 }
