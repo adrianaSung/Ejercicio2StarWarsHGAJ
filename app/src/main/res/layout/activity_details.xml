@@ -48,10 +48,10 @@
                     android:textSize="20sp" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView5"
                     android:layout_width="match_parent"
-                    android:layout_height="189dp"
-                    app:srcCompat="@drawable/starwarsplanet" />
+                    android:layout_height="179dp"
+                    app:srcCompat="@drawable/swplanet" />
 
                 <TextView
                     android:id="@+id/textNombredel"

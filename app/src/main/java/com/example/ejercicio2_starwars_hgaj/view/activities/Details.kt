@@ -1,5 +1,6 @@
 package com.example.ejercicio2_starwars_hgaj.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,6 +30,7 @@ class Details : AppCompatActivity() {
 
         var caracterPer: Int = 0
         var caracterPlan: Int= 0
+
 
         val bundle = intent.extras
 
@@ -92,4 +94,9 @@ class Details : AppCompatActivity() {
             })
         }
     }
+    fun click(view: View){
+        val intent2 = Intent(this,PeliculasDetails::class.java)
+        startActivity(intent2)
+    }
+
 }
