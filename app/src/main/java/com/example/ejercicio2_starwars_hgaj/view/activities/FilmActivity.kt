@@ -20,6 +20,13 @@ class FilmActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         var caracterPel: Int = 0
+        var caracterPel2: Int= 0
+        var caracterPel3: Int = 0
+        var caracterPel4: Int= 0
+        var caracterPel5: Int = 0
+        var caracterPel6: Int= 0
+
+
         val bundle = intent.extras
         val name = bundle?.getString("name", "")
         for ((clave, valor) in Constants.listaPeliculas){
@@ -27,7 +34,37 @@ class FilmActivity : AppCompatActivity() {
                 caracterPel = valor
             }
         }
+        for ((clave, valor) in Constants.listaPeliculas2){
+            if (clave.equals(name.toString())) {
+                caracterPel2 = valor
+            }
+        }
+        for ((clave, valor) in Constants.listaPelicula3){
+            if (clave.equals(name.toString())) {
+                caracterPel3 = valor
+            }
+        }
+        for ((clave, valor) in Constants.listaPeliculas4){
+            if (clave.equals(name.toString())) {
+                caracterPel4 = valor
+            }
+        }
+        for ((clave, valor) in Constants.listaPeliculas5){
+            if (clave.equals(name.toString())) {
+                caracterPel5 = valor
+            }
+        }
+        for ((clave, valor) in Constants.listaPeliculas6){
+            if (clave.equals(name.toString())) {
+                caracterPel6 = valor
+            }
+        }
         val call = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel)
+        val call2 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel2)
+        val call3 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel3)
+        val call4 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel4)
+        val call5 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel5)
+        val call6 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel6)
         call.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
@@ -45,6 +82,92 @@ class FilmActivity : AppCompatActivity() {
             }
 
         })
+        call2.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
+            override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    tvPeliculaS1.text = response.body()?.title
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        call3.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
+            override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    tvPeliculaS3.text = response.body()?.title
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        call4.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
+            override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    tvPeliculaS4.text = response.body()?.title
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        call5.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
+            override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    tvPeliculaS5.text = response.body()?.title
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        call6.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
+            override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    tvPeliculaS6.text = response.body()?.title
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        
 
     }
 }

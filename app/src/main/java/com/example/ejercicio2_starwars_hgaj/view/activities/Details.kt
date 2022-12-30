@@ -21,6 +21,7 @@ import retrofit2.Response
 
 class Details : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
+    private lateinit var nombre: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityDetailsBinding.inflate(layoutInflater)
@@ -96,8 +97,16 @@ class Details : AppCompatActivity() {
         }
     }
     fun click(view: View){
+        val param= Bundle()
+
+
+
+        param.apply {
+            putString("name",nombre)
+        }
 
         val intent = Intent(this@Details,FilmActivity::class.java)
+        intent.putExtras(param)
 
         startActivity(intent)
     }
