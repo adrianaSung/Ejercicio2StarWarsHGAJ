@@ -29,6 +29,7 @@ class FilmActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         val name = bundle?.getString("name", "")
+
         for ((clave, valor) in Constants.listaPeliculas){
             if (clave.equals(name.toString())) {
                 caracterPel = valor
@@ -167,7 +168,7 @@ class FilmActivity : AppCompatActivity() {
             }
 
         })
-        
+
 
     }
 }

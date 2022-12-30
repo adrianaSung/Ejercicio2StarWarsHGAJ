@@ -37,6 +37,7 @@ class Details : AppCompatActivity() {
         val bundle = intent.extras
 
         val name = bundle?.getString("name", "")
+        nombre=name.toString()
        // val namePlanet = bundle?.getString("namePlanet", "")
         for ((clave, valor) in Constants.listaPlanetas){
             if (clave.equals(name.toString())) {
