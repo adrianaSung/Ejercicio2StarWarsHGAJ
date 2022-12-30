@@ -177,6 +177,7 @@
                     android:layout_width="264dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aldrich"
+                    android:onClick="click"
                     android:text="Peliculas"
                     android:textColor="@color/white" />
             </LinearLayout>
