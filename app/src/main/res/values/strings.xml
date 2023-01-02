@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Ejercicio2-StarWars-HGAJ</string>
+    <string name="personaje_details">Personaje</string>
+    <string name="planeta_title">Planeta</string>
+    <string name="nombre_planeta">Nombre del planeta</string>
+    <string name="nombre_pla">Nombre del planeta</string>
+    <string name="periodo_rot">Periodo de rotacion</string>
+    <string name="periodo_rotacion">Periodo de rotación</string>
+    <string name="periodo_or">Periodo orbital</string>
+    <string name="periodo_orbital">Periodo orbital</string>
+    <string name="diametro">Diametro</string>
+    <string name="diam">Diametro</string>
+    <string name="clima">Clima</string>
+    <string name="clim">Clima</string>
+    <string name="terreno">Terreno</string>
+    <string name="terren">Terreno</string>
+    <string name="poblacion">Población</string>
+    <string name="poblan">Población</string>
+    <string name="peliculas">Peliculas</string>
+    <string name="nombre_star">Nombre</string>
+    <string name="altura">Altura</string>
+    <string name="ano_nacimiento">Año de nacimiento</string>
+    <string name="genero">Genero</string>
+    <string name="num">Numero</string>
+    <string name="title_personaje">Star Wars Personaje</string>
+    <string name="version">Version 1.0</string>
 </resources>

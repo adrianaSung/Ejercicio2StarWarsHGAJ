@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        tools:text="Nombre" />
+        tools:text="@string/nombre_star" />
 
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/krona_one"
         android:includeFontPadding="false"
-        android:text="Altura"
+        android:text="@string/altura"
         android:textColor="@color/material_dynamic_neutral0"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline5"
@@ -75,7 +75,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/aldrich"
         android:includeFontPadding="false"
-        android:text="Año de nacimiento"
+        android:text="@string/ano_nacimiento"
         android:textColor="@color/material_dynamic_tertiary20"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline4"
@@ -92,7 +92,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/aldrich"
         android:includeFontPadding="false"
-        android:text="Genero"
+        android:text="@string/genero"
         android:textColor="@color/material_dynamic_neutral0"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline3"
@@ -154,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/supermercado_one"
-        android:text="TextView"
+        android:text="@string/num"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/tvAltura"
         app:layout_constraintHorizontal_bias="1.0"

@@ -36,14 +36,14 @@
                     android:paddingBottom="10dp"
                     android:textColor="@color/white"
                     android:textSize="25sp"
-                    tools:text="Personaje" />
+                    android:text="@string/personaje_details" />
 
                 <TextView
                     android:id="@+id/tvPlaneta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aldrich"
-                    android:text="Planeta"
+                    android:text="@string/planeta_title"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Nombre del planeta"
+                    android:text="@string/nombre_pla"
                     android:textColor="@color/design_default_color_on_secondary" />
 
                 <TextView
@@ -66,7 +66,7 @@
                     android:layout_width="209dp"
                     android:layout_height="39dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Nombre"
+                    android:text="@string/nombre_planeta"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -75,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Periodo de rotación"
+                    android:text="@string/periodo_rot"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -83,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Periodo de rotación"
+                    android:text="@string/periodo_rotacion"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -92,7 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Periodo orbital"
+                    android:text="@string/periodo_or"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -100,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="34dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Periodo orbital"
+                    android:text="@string/periodo_orbital"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -109,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Diametro"
+                    android:text="@string/diametro"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -117,7 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Diametro"
+                    android:text="@string/diam"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -126,7 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Clima"
+                    android:text="@string/clima"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -134,7 +134,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Clima"
+                    android:text="@string/clim"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -143,7 +143,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Terreno"
+                    android:text="@string/terreno"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -151,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Terreno"
+                    android:text="@string/terren"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -160,7 +160,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/krona_one"
-                    android:text="Población"
+                    android:text="@string/poblacion"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -168,7 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/supermercado_one"
-                    android:text="Poblacion"
+                    android:text="@string/poblan"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -178,7 +178,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aldrich"
                     android:onClick="click"
-                    android:text="Peliculas"
+                    android:text="@string/peliculas"
                     android:textColor="@color/white" />
             </LinearLayout>
         </ScrollView>
