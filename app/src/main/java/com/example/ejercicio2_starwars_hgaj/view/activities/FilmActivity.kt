@@ -3,11 +3,10 @@ package com.example.ejercicio2_starwars_hgaj.view.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.bumptech.glide.Glide
 import com.example.ejercicio2_starwars_hgaj.databinding.ActivityDetailsBinding
 import com.example.ejercicio2_starwars_hgaj.databinding.ActivityFilmBinding
-import com.example.ejercicio2_starwars_hgaj.model.starApi
-import com.example.ejercicio2_starwars_hgaj.model.starDetail
-import com.example.ejercicio2_starwars_hgaj.model.starPeliculaDetail
+import com.example.ejercicio2_starwars_hgaj.model.*
 import com.example.ejercicio2_starwars_hgaj.util.Constants
 import retrofit2.Call
 import retrofit2.Response
@@ -25,10 +24,12 @@ class FilmActivity : AppCompatActivity() {
         var caracterPel4: Int= 0
         var caracterPel5: Int = 0
         var caracterPel6: Int= 0
+        var poster1: Int=0
 
 
         val bundle = intent.extras
         val name = bundle?.getString("name", "")
+
 
         for ((clave, valor) in Constants.listaPeliculas){
             if (clave.equals(name.toString())) {
@@ -60,17 +61,25 @@ class FilmActivity : AppCompatActivity() {
                 caracterPel6 = valor
             }
         }
+        for ((clave, valor) in Constants.listaPoster1){
+            if (clave.equals(name.toString())) {
+                poster1= valor
+            }
+        }
         val call = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel)
         val call2 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel2)
         val call3 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel3)
         val call4 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel4)
         val call5 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel5)
         val call6 = Constants.getRetrofit().create(starApi::class.java).peliculaDetail(caracterPel6)
+        val call7 = Constants.getRetrofit().create(starApi::class.java).posterDetail(poster1)
         call.enqueue(object: retrofit2.Callback<starPeliculaDetail> {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
                     tvPeliculaS.text = response.body()?.title
+
+
 
                 }
 
@@ -155,7 +164,7 @@ class FilmActivity : AppCompatActivity() {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
-                    tvPeliculaS6.text = response.body()?.title
+                   // tvPeliculaS6.text = response.body()?.title
 
                 }
 
@@ -163,6 +172,24 @@ class FilmActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<starPeliculaDetail>, t: Throwable) {
+                binding.pbConexion.visibility = View.GONE
+
+            }
+
+        })
+        call7.enqueue(object: retrofit2.Callback<posterDetails> {
+            override fun onResponse(call: Call<posterDetails>, response: Response<posterDetails>) {
+                binding.pbConexion.visibility = View.GONE
+                with(binding){
+                    Glide.with(this@FilmActivity)
+                        .load(response.body()?.posterImagen)
+                        .into(imgPoster1)
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<posterDetails>, t: Throwable) {
                 binding.pbConexion.visibility = View.GONE
 
             }

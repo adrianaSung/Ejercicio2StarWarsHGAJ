@@ -24,6 +24,14 @@ interface starApi {
     @GET("api/films/{num3}/")
     fun peliculaDetail(@Path("num3") num: Int): Call<starPeliculaDetail>
 
+    @GET("cm2023-1/")
+    fun poster(): Call<poster>
+
+    @GET("cm2023-1/{num4}")
+    fun posterDetail(@Path("num4") num: Int): Call<posterDetails>
+
+
+
 
 
 

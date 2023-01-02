@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Constants{
     const val BASE_URL = "https://swapi.dev/"
+    const val BASE_URLIMAGE = "https://aulavirtual.amaurypm.com/"
     const val LOGTAG= "LOGS"
 
     val  listaPersonajes: HashMap<String, Int> = hashMapOf("Luke Skywalker" to 1, "C-3PO" to 2,
@@ -35,12 +36,21 @@ object Constants{
     val listaPeliculas6:HashMap<String,Int> = hashMapOf("Luke Skywalker" to 6, "C-3PO" to 6,
         "R2-D2" to 6,"Darth Vader" to 6,"Leia Organa" to 6,"Owen Lars" to 6,"Beru Whitesun lars" to 6,"Obi-Wan Kenobi" to 6)
 
+   val listaPeliculaPoster:HashMap<String,Int> = hashMapOf("A New Hope" to 1,"The Empire Strikes Back" to 2,"Return of the Jedi" to 3,
+        "The Phantom Menace" to 4,"Attack of the Clones" to 5,"Revenge of the Sith" to 6)
+    val listaPoster1:HashMap<String,Int> = hashMapOf("sw1.jpg" to 1,"sw2.jpg" to 2,"sw3.jpg" to 3,"sw4.jpg" to 4,"sw5.jpg" to 5,"sw6.jpg" to 6)
 
 
 
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+    fun getRetrofitImagen(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URLIMAGE)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
