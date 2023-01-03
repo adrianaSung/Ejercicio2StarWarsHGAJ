@@ -116,7 +116,7 @@ class FilmActivity : AppCompatActivity() {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
-                    tvPeliculaS3.text = response.body()?.title
+                    tvPeliculaS2.text = response.body()?.title
 
                 }
 
@@ -133,7 +133,7 @@ class FilmActivity : AppCompatActivity() {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
-                    tvPeliculaS4.text = response.body()?.title
+                    tvPeliculaS3.text = response.body()?.title
 
                 }
 
@@ -150,7 +150,7 @@ class FilmActivity : AppCompatActivity() {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
-                    tvPeliculaS5.text = response.body()?.title
+                    tvPeliculaS4.text = response.body()?.title
 
                 }
 
@@ -167,7 +167,7 @@ class FilmActivity : AppCompatActivity() {
             override fun onResponse(call: Call<starPeliculaDetail>, response: Response<starPeliculaDetail>) {
                 binding.pbConexion.visibility = View.GONE
                 with(binding){
-                   // tvPeliculaS6.text = response.body()?.title
+                   tvPeliculaS5.text = response.body()?.title
 
                 }
 
