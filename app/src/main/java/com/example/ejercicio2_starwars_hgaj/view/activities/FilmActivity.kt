@@ -29,6 +29,9 @@ class FilmActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         val name = bundle?.getString("name", "")
+        val title=bundle?.getString("title","")
+
+
 
 
         for ((clave, valor) in Constants.listaPeliculas){
@@ -62,7 +65,7 @@ class FilmActivity : AppCompatActivity() {
             }
         }
         for ((clave, valor) in Constants.listaPoster1){
-            if (clave.equals(name.toString())) {
+            if (clave.equals(title.toString())) {
                 poster1= valor
             }
         }
